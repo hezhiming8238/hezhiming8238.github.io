@@ -1,1 +1,271 @@
-<!doctype html><html><head><meta charset="utf-8"><title>hezhiming8238</title><style>body{font-family:system-ui;background:#081120;color:#e5eefc;display:grid;place-items:center;min-height:100vh;margin:0}main{max-width:720px;padding:32px}a{color:#7dd3fc}</style></head><body><main><h1>hezhiming8238</h1><p>Personal homepage on GitHub Pages.</p><p><a href="https://github.com/hezhiming8238">GitHub profile</a></p></main></body></html>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hezhiming8238 的个人主页</title>
+    <!-- 引入外部字体和图标库 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* 基础重置与变量 */
+        :root {
+            --bg-color: #0f172a;        /* 现代深蓝灰背景 */
+            --card-bg: #1e293b;         /* 卡片背景色 */
+            --text-main: #f8fafc;       /* 主标题文字 */
+            --text-muted: #cbd5e1;      /* 次要文字 */
+            --accent: #38bdf8;          /* 点缀色/链接色 */
+            --accent-hover: #7dd3fc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-muted);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        /* 头部信息 */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--card-bg);
+            margin-bottom: 20px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .avatar:hover {
+            transform: scale(1.05) rotate(3deg);
+        }
+
+        h1 {
+            color: var(--text-main);
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .tagline {
+            font-size: 1.125rem;
+            margin-bottom: 24px;
+        }
+
+        /* 社交媒体链接 */
+        .social-links a {
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            margin: 0 12px;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        /* 通用区块样式 */
+        section {
+            margin-bottom: 60px;
+            animation: fadeIn 1s ease;
+        }
+
+        h2 {
+            color: var(--text-main);
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--card-bg);
+            padding-bottom: 8px;
+            margin-bottom: 24px;
+            display: inline-block;
+        }
+
+        /* 技能标签 */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-tag {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 6px 16px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            transition: background-color 0.3s;
+        }
+        
+        .skill-tag:hover {
+            background-color: rgba(56, 189, 248, 0.2);
+        }
+
+        /* 项目卡片网格 */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            padding: 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid transparent;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card h3 {
+            color: var(--text-main);
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            flex-grow: 1;
+        }
+
+        .project-tech {
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        /* 页脚 */
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 24px;
+            border-top: 1px solid var(--card-bg);
+            font-size: 0.875rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* 简单入场动画 */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 头部个人信息 -->
+        <header>
+            <!-- 建议替换成你真实的 GitHub 头像链接 -->
+            <img src="https://github.com/hezhiming8238.png" alt="hezhiming8238" class="avatar">
+            <h1>hezhiming8238</h1>
+            <p class="tagline">热爱编程的开发者 | 探索技术的无限可能</p>
+            
+            <div class="social-links">
+                <a href="https://github.com/hezhiming8238" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:your.email@example.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="#" title="Blog/Website"><i class="fas fa-link"></i></a>
+            </div>
+        </header>
+
+        <!-- 关于我 -->
+        <section id="about">
+            <h2><i class="fas fa-user-astronaut"></i> 关于我</h2>
+            <p>你好！我是 <strong>hezhiming8238</strong>。这是一个我用来记录学习、代码和开源项目的空间。我喜欢构建有趣且实用的工具，对新技术充满好奇心，并乐于在开源社区中分享我的见解。</p>
+        </section>
+
+        <!-- 技能栈 -->
+        <section id="skills">
+            <h2><i class="fas fa-code"></i> 技术栈</h2>
+            <div class="skills-container">
+                <span class="skill-tag">HTML5 & CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Git & GitHub</span>
+                <span class="skill-tag">Markdown</span>
+                <!-- 在这里添加更多你的技能 -->
+            </div>
+        </section>
+
+        <!-- 项目展示 -->
+        <section id="projects">
+            <h2><i class="fas fa-laptop-code"></i> 开源项目</h2>
+            <div class="projects-grid">
+                
+                <!-- 项目卡片 1 -->
+                <a href="https://github.com/hezhiming8238/project-name-1" target="_blank" class="project-card">
+                    <div>
+                        <h3><i class="far fa-folder-open"></i> Project Alpha</h3>
+                        <p>这是一个非常酷的开源项目，主要用于解决某些特定的问题。它拥有简洁的代码架构和友好的用户界面。</p>
+                    </div>
+                    <div class="project-tech">🔴 JavaScript  ⭐ 12</div>
+                </a>
+
+                <!-- 项目卡片 2 -->
+                <a href="https://github.com/hezhiming8238/project-name-2" target="_blank" class="project-card">
+                    <div>
+                        <h3><i class="far fa-folder-open"></i> Tools Hub</h3>
+                        <p>集合了多种实用开发者工具的脚本库，自动化处理日常繁杂任务，提高工作效率。</p>
+                    </div>
+                    <div class="project-tech">🔵 Python  ⭐ 8</div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- 页脚 -->
+        <footer>
+            <p>&copy; 2024 hezhiming8238. Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
